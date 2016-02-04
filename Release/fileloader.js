@@ -20,8 +20,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'BuildProjects.data';
-    var REMOTE_PACKAGE_BASE = 'BuildProjects.data';
+    var PACKAGE_NAME = 'FlappyBird.data';
+    var REMOTE_PACKAGE_BASE = 'FlappyBird.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -30,8 +30,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 11416915;
-      var PACKAGE_UUID = 'bc9837bc-41dc-410b-91ac-f2bbe1cd1c9e';
+      var REMOTE_PACKAGE_SIZE = 11416531;
+      var PACKAGE_UUID = '1c9bf610-a179-48a2-821a-8e7c04695935';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -132,13 +132,13 @@ Module['FS_createPath']('/', 'Resources', true, true);
       },
     };
 
-      new DataRequest(0, 35036, 0, 0).open('GET', '/mainData');
-    new DataRequest(35036, 35263, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(35263, 7537811, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(7537811, 7578283, 0, 0).open('GET', '/sharedassets0.resource');
-    new DataRequest(7578283, 9007247, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(9007247, 10894631, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(10894631, 11416915, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 34652, 0, 0).open('GET', '/mainData');
+    new DataRequest(34652, 34879, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(34879, 7537427, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(7537427, 7577899, 0, 0).open('GET', '/sharedassets0.resource');
+    new DataRequest(7577899, 9006863, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(9006863, 10894247, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(10894247, 11416531, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -155,10 +155,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_BuildProjects.data');
+          Module['removeRunDependency']('datafile_FlappyBird.data');
 
     };
-    Module['addRunDependency']('datafile_BuildProjects.data');
+    Module['addRunDependency']('datafile_FlappyBird.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
